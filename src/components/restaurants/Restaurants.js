@@ -6,14 +6,20 @@ class Restaurants extends Component {
     super(props)
   }
 
-  renderRestaurants = () => {
-    return this.props.restaurants.map(restaurant => <li><Restaurant restaurant={restaurant}/></li>)
-  }
+  // renderRestaurants = () => {
+  //   let restaurantList = this.props.restaurants.map(restaurant => <li><Restaurant restaurant={restaurant}/></li>)
+  // }
 
   render() {
+    let restaurantList = this.props.restaurants.map(restaurant => {
+      return (
+        <Restaurant restaurant={restaurant}/>
+      )
+    })
+
     return(
       <ul>
-        {this.renderRestaurants()}
+        {restaurantList}
       </ul>
     );
   }
