@@ -4,7 +4,6 @@ import ReviewsContainer from '../../containers/ReviewsContainer'
 class Restaurant extends Component {
   constructor(props) {
     super(props)
-    //console.log("props in Restaurant: ", props)
   }
 
   render() {
@@ -14,7 +13,7 @@ class Restaurant extends Component {
       <div>
         <li>
           {restaurant.text}
-          <button> X </button>
+          <button onClick={event => this.props.deleteRestaurant(restaurant.id)}> X </button>
           <ReviewsContainer restaurant={restaurant}/>
         </li>
       </div>

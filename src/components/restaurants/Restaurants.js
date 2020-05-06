@@ -13,7 +13,7 @@ class Restaurants extends Component {
   render() {
     let restaurantList = this.props.restaurants.map(restaurant => {
       return (
-        <Restaurant restaurant={restaurant}/>
+        <Restaurant restaurant={restaurant} deleteRestaurant={this.props.deleteRestaurant}/>
       )
     })
 
