@@ -4,7 +4,8 @@ export const cuidFn = cuid;
 export default function manageRestaurants(state = {restaurants: []}, action) {
   switch(action.type) {
     case 'ADD_RESTAURANT':
-      const newRestaurant = {text: action.payload, id: cuid()}
+      console.log("action in reducer: ", action)
+      const newRestaurant = {text: action.payload.text, id: cuid()}
       return {...state, restaurants: [...state.restaurants, newRestaurant]}
 
     default:
