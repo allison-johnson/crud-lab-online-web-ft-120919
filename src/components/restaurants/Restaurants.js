@@ -11,6 +11,7 @@ class Restaurants extends Component {
   // }
 
   render() {
+    console.log("this.props.restaurants in Restaurants: ", this.props.restaurants)
     let restaurantList = this.props.restaurants.map(restaurant => {
       return (
         <Restaurant restaurant={restaurant} deleteRestaurant={this.props.deleteRestaurant}/>
